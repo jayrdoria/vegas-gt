@@ -1,0 +1,512 @@
+/* Default Style for Desktops */
+body {
+  background-color: #0b0d16 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Vegas_GT */
+.vegas-gt-container {
+  background-image: url("/public/assets/VegasGT_banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 125vh;
+  margin-bottom: 40px;
+}
+
+/* TopCasino */
+@font-face {
+  font-family: "Neon Absolute Sans";
+  src: url("/public/assets/fonts/NEON-ABSOLUTE-SANS1.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: url("/public/assets/fonts/GothamBook.ttf") format("truetype");
+}
+
+.top-casino-container h1 {
+  font-family: "Neon Absolute Sans", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 39px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.triple-border-container {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: #0b0d16; /* Background color */
+  border: 1px solid #00e9fc; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e9fc,
+    /* Outermost border */ 0 0 5px #00e9fc, /* Glow */ 0 0 20px #00e9fc; /* More Glow */
+}
+
+.column_1 {
+  background-color: #f5615e;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.casino_voila_bg_color {
+  background-color: #190754;
+}
+
+.chanz_bg_color {
+  background-color: #3a4362;
+}
+
+.brango_bg_color {
+  background-color: #000000;
+}
+
+.norges_bg_color {
+  background-color: #053e76;
+}
+
+.custom-title {
+  color: white;
+  font-size: 33px;
+  font-family: "Gotham Bold", sans-serif;
+}
+
+.yellow-stars {
+  color: yellow;
+  margin-top: -10px;
+}
+
+.check-icon-bg {
+  background-color: #f41b75;
+  display: flex; /* Use flexbox to center the icon */
+  justify-content: center; /* Horizontally center the icon */
+  align-items: center; /* Vertically center the icon */
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the background circular */
+  flex-shrink: 0; /* Prevents the container from shrinking */
+  flex-grow: 0; /* Prevents the container from growing */
+}
+
+.check-icon {
+  color: #0b0d16;
+  width: 16px; /* Set the width of the icon */
+  height: 16px; /* Set the height of the icon */
+  font-size: 16px; /* Adjust as needed, to ensure the icon scales correctly */
+}
+
+.text-design {
+  font-family: "Gotham-Light", sans-serif;
+  color: white;
+  margin: 0 0 0 0.5em;
+  letter-spacing: 1.5px; /* Adjust as needed */
+}
+
+.check-text-container {
+  display: flex; /* Makes it a flex container */
+  align-items: center; /* Vertically center aligns the content */
+}
+
+.visit-casino-btn {
+  border-radius: 50px;
+  background-color: #0b0d16;
+  border: 3px solid #f41b75; /* Single border */
+  box-shadow: 0 0 5px #f41b75, /* Glow */ 0 0 20px #f41b75; /* More Glow */
+  color: white;
+  padding: 2px 40px 2px 40px; /* Adjust as needed for button size */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-size: 20px; /* Updated font size */
+  font-family: "adineuePRO-bold", sans-serif; /* Updated font family */
+  font-weight: bold; /* Bold text */
+}
+
+/* Hover effect */
+.visit-casino-btn:hover {
+  background-color: #f41b75;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label,
+.arrow-icon {
+  padding: 10px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Gotham-Bold", sans-serif;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.arrow-icon {
+  background-color: #f41b75;
+  border-radius: 50%; /* Makes it circular */
+  padding: 3px; /* Adjust as needed to size the circle */
+  color: #0b0d16;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.arrow-icon.fas.fa-arrow-up.hidden {
+  display: none;
+}
+
+.toggle-input:checked ~ .toggle-label .fas.fa-arrow-down {
+  display: none;
+}
+
+.toggle-input:checked ~ .toggle-label .fas.fa-arrow-up {
+  display: inline-block;
+}
+
+.expanding-container {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.expanding-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0; /* This ensures the content is hidden by default */
+  opacity: 0; /* Start with transparent content */
+  transform: translateY(-50%); /* Start with the content slightly moved up */
+  width: 100%;
+  padding: 0 20px 0 20px;
+  transition: opacity 0.5s, transform 0.5s, max-height 0.5s ease-in-out;
+  will-change: opacity, transform, max-height;
+}
+
+.toggle-input:checked + .toggle-label + .expanding-content {
+  max-height: 500px; /* Adjust this value based on the content's height */
+  opacity: 1; /* End with opaque content */
+  transform: translateY(0); /* End with the content in its natural position */
+}
+
+.language-row {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+}
+
+.toggle-input:checked + .toggle-label + .expanding-content {
+  max-height: 150px; /* Adjust this value based on the content's height */
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.language-icon {
+  width: 24px; /* adjust as needed */
+  height: 24px; /* adjust as needed */
+  margin-right: 5px;
+}
+
+.language-option p {
+  margin: 0;
+  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+  font-family: "Gotham Book";
+  font-size: 11px;
+  width: 75px;
+}
+
+.language-option i {
+  margin: 0 5px 0 0;
+}
+
+.games-payment-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 50%;
+  background-color: #0b0d16;
+  border: 3px solid #1ae0d5; /* Milder Neon Teal border */
+  box-shadow: 0 0 5px #1ae0d5, /* Milder Neon Teal Glow */ 0 0 20px #1ae0d5; /* More Milder Neon Teal Glow */
+  color: white; /* White text */
+  padding: 2px 15px 2px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect and color change */
+  font-size: 15px;
+  font-family: "adineuePRO-bold", sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.games-payment-btn:hover {
+  background-color: #0b88ab; /* Muted Teal on hover */
+  box-shadow: 0 0 5px #0b88ab, /* Muted Teal Glow on hover */ 0 0 20px #0b88ab; /* More Muted Teal Glow on hover */
+}
+
+.dark-modal .modal-content {
+  background-color: #0b0d16;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #00e9fc; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e9fc,
+    /* Outermost border */ 0 0 5px #00e9fc, /* Glow */ 0 0 20px #00e9fc; /* More Glow */
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+  border-color: #454d55;
+}
+
+.games-modal-content span {
+  flex: 1; /* This ensures each span grows to take up an equal amount of space */
+  text-align: center;
+}
+
+.dark-modal {
+  background: rgba(255, 255, 255, 0.1); /* Slight white tint */
+  backdrop-filter: blur(10px); /* Blurring the background content */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Thin border with light color for that glass effect */
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-body {
+  border-bottom: 2px solid #00e9fc;
+  box-shadow: 0 0 5px #00e9fc, 0 0 10px #00e9fc;
+}
+
+.dark-modal .btn-secondary {
+  background: rgba(255, 255, 255, 0.1); /* Slight white tint */
+  backdrop-filter: blur(5px); /* Blurring the background content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 2px solid #00e9fc; /* Retaining the neon border */
+  color: #00e9fc;
+  transition: all 0.3s; /* Transition effect for hover */
+  transform: translateY(0); /* Initial state */
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.dark-modal .btn-secondary:hover {
+  background: rgba(0, 233, 252, 0.1);
+  color: white;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /* A slightly more pronounced shadow on hover */
+  transform: translateY(
+    -3px
+  ); /* Slight upward movement to give a 3D pressing effect */
+}
+.dark-modal .btn-secondary:active {
+  transform: translateY(0); /* Button returns to its original position */
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Resetting shadow to its original state */
+}
+
+.games-btn-1,
+.games-btn-2,
+.games-btn-3,
+.games-btn-4,
+.games-btn-5,
+.games-btn-6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  width: 100%;
+  background-color: #0b0d16;
+  color: white;
+  font-size: 12px; /* Updated font size */
+  font-family: "Gotham-Light", sans-serif;
+  font-weight: bold; /* Bold text */
+  white-space: nowrap;
+  cursor: default !important;
+}
+
+.games-btn-1 {
+  border: 3px solid #f81909; /* Single border */
+  box-shadow: 0 0 5px #f81909, /* Glow */ 0 0 20px #f81909; /* More Glow */
+}
+
+.games-btn-2 {
+  border: 3px solid #efe941; /* Single border */
+  box-shadow: 0 0 5px #efe941, /* Glow */ 0 0 20px #efe941; /* More Glow */
+}
+
+.games-btn-3 {
+  border: 3px solid #00f04f; /* Single border */
+  box-shadow: 0 0 5px #00f04f, /* Glow */ 0 0 20px #00f04f; /* More Glow */
+}
+
+.games-btn-4 {
+  border: 3px solid #00e4f0; /* Single border */
+  box-shadow: 0 0 5px #00e4f0, /* Glow */ 0 0 20px #00e4f0; /* More Glow */
+}
+
+.games-btn-5 {
+  border: 3px solid #4402ea; /* Single border */
+  box-shadow: 0 0 5px #4402ea, /* Glow */ 0 0 20px #4402ea; /* More Glow */
+}
+
+.games-btn-6 {
+  border: 3px solid #fa17d0; /* Single border */
+  box-shadow: 0 0 5px #fa17d0, /* Glow */ 0 0 20px #fa17d0; /* More Glow */
+}
+
+.white-bg-container {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.img-container {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px rgba(11, 13, 22, 0.2);
+  display: flex; /* to enable flexbox for centering */
+  justify-content: center; /* horizontally center the image */
+  align-items: center; /* vertically center the image */
+  padding: 2px;
+
+  border-radius: 5px; /* optional, for rounded corners */
+}
+
+.my-image {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  object-fit: contain; /* to ensure the image fits within the container without being cropped */
+}
+
+.img-container:hover .my-image {
+  transform: scale(1.1);
+}
+.available-games-sm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 5px;
+  text-align: center;
+  overflow: hidden; /* Hide games that are out of the container */
+}
+
+/* Adjusting the title styles */
+.available-games-sm h4 {
+  font-family: "Gotham Light", sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 10px; /* spacing between the title and game name */
+}
+
+/* Adjusting the game name styles */
+.game-name {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 17px;
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  animation: scrollBounce 1.5s linear infinite;
+  display: inline-block;
+}
+
+.game-name {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 17px;
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  animation: slideCentered 2s infinite;
+  display: inline-block;
+}
+
+@keyframes slideCentered {
+  0% {
+    transform: translateX(-100%); /* Start from the left */
+    opacity: 0;
+  }
+  10%,
+  90% {
+    transform: translateX(
+      0
+    ); /* Stay in the center for most of the animation duration */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%); /* Slide out to the right */
+    opacity: 0;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  /* Vegas_GT */
+  .vegas-gt-container {
+    background-position: center;
+    height: 60vh;
+  }
+  .top-casino-container.container {
+    max-width: 100%; /* Override the max-width */
+  }
+}
+/* For Laptops and Large Tablets */
+@media (max-width: 992px) {
+}
+
+@media (max-width: 991px) {
+  /* TopCasino */
+  .top-casino-container {
+    max-width: 100%;
+  }
+  .triple-border-container {
+    margin-bottom: 0;
+  }
+  /* Top Casino */
+  .triple-border-container {
+    padding: 10px;
+  }
+  .triple-border-container .row {
+    margin: 0; /* Remove margin from the row */
+  }
+
+  .triple-border-container .column_1 {
+    padding: 10px; /* Adjust padding for the content inside the column */
+    margin: 0; /* Ensure no margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+  /* Vegas_GT */
+  .vegas-gt-container {
+    background-position: top;
+    height: 50vh;
+  }
+  /* Top Casino */
+  .centered-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Vegas_GT */
+  .vegas-gt-container {
+    background-position: center;
+    height: 40vh;
+  }
+}

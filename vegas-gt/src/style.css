@@ -1,0 +1,8 @@
+.vegas-gt-container {
+  background-image: url("../assets/VegasGT_banner.png"); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
