@@ -39,7 +39,9 @@ const TopCasino = () => {
 
   return (
     <div className="container top-casino-container">
-      <h1 className="text-center">TOP CASINO</h1>
+      <h1 className="text-center" id="top-casino">
+        TOP CASINO
+      </h1>
       {topCasinoData.map((data, index) => (
         <div className="row" key={index}>
           <div className="triple-border-container">

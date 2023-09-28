@@ -3,6 +3,7 @@ body {
   background-color: #0b0d16 !important;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Vegas_GT */
@@ -151,7 +152,7 @@ body {
 .arrow-icon {
   background-color: #f41b75;
   border-radius: 50%; /* Makes it circular */
-  padding: 3px; /* Adjust as needed to size the circle */
+  padding: 4px; /* Adjust as needed to size the circle */
   color: #0b0d16;
   margin-right: 10px; /* Adjust as needed */
 }
@@ -371,7 +372,6 @@ body {
   justify-content: center; /* horizontally center the image */
   align-items: center; /* vertically center the image */
   padding: 2px;
-
   border-radius: 5px; /* optional, for rounded corners */
 }
 
@@ -450,6 +450,263 @@ body {
   }
 }
 
+/* Reviews */
+.reviews-container-carousel {
+  display: flex;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  background-color: #0b0d16; /* Background color */
+  border: 1px solid #00e666; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e666,
+    /* Outermost border */ 0 0 5px #00e666, /* Glow */ 0 0 10px #00e666; /* More Glow */
+  flex: 0 0 49%; /* reduces the width slightly */
+  max-width: 49%; /* reduces the width slightly */
+  /*... other styles ...*/
+}
+.provider-h1,
+.reviews-h1 {
+  font-family: "Neon Absolute Sans", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 39px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.carousel-inner {
+  padding: 5px;
+}
+
+.reviews-container-carousel img {
+  width: 20%;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.reviews-container-carousel h4,
+.reviews-container-carousel p {
+  color: white;
+}
+
+.reviews-container-carousel h4 {
+  font-size: 16px;
+}
+.reviews-container-carousel p {
+  font-size: 10px;
+}
+
+.stars .fa-star {
+  color: gold;
+  margin-right: 5px;
+}
+
+.stars .fa-star,
+.stars .fa-star-half-alt {
+  color: gold;
+  margin-right: 5px;
+}
+
+.review-description {
+  padding: 5px;
+}
+
+.review-description h1 {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.review-description p {
+  font-family: "Gotham Book";
+  font-size: 15px;
+}
+
+.image-and-name img {
+  width: 150px;
+}
+/* New styles for the carousel indicators container */
+.carousel-indicators-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the indicators */
+  margin-top: 20px; /* Space between carousel items and indicators. Adjust as necessary. */
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center; /* Horizontally center the buttons */
+  list-style: none;
+  padding-left: 0; /* Remove padding */
+}
+
+.carousel-indicators button {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+
+.carousel-indicators .active {
+  background-color: white;
+  opacity: 1;
+}
+
+/* GameProvider */
+.provider-container {
+  flex: 1; /* Each container will take up an equal amount of space */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 20px;
+  margin: 25px 25px 25px 0;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: #0b0d16; /* Background color */
+  border: 1px solid #ff13f8; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #ff13f8,
+    /* Outermost border */ 0 0 5px #ff13f8, /* Glow */ 0 0 20px #ff13f8; /* More Glow */
+}
+
+.provider-img {
+  width: 150px !important; /* Let the image decide its width based on height */
+  height: 60px !important;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between; /* Spreads the items out equally */
+  flex-wrap: nowrap; /* Ensures items stay on one line */
+}
+.card.provider-container {
+  background-color: #0b0d16;
+}
+.card-text {
+  font-family: "Gotham Book";
+  font-size: 16px;
+  color: white;
+}
+
+/* FAQ */
+.faq-container {
+  border-radius: 5px;
+  background-color: #0b0d16; /* Background color */
+  border: 1px solid #ff711b; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #ff711b,
+    /* Outermost border */ 0 0 5px #ff711b, /* Glow */ 0 0 20px #ff711b; /* More Glow */
+}
+.toggle-input {
+  display: none;
+}
+
+.toggle-label-faq {
+  font-family: "Gotham Book";
+  font-size: 16px;
+  color: white;
+}
+
+.toggle-label-faq,
+.arrow-icon {
+  padding: 10px;
+}
+
+.arrow-icon {
+  background-color: #f41b75;
+  border-radius: 50%; /* Makes it circular */
+  padding: 3px 4px 3px 4px; /* Adjust as needed to size the circle */
+  color: #0b0d16;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.arrow-icon.fas.fa-arrow-up.hidden {
+  display: none;
+}
+
+.toggle-input:checked + .toggle-label-faq .fas.fa-arrow-down {
+  display: none;
+}
+
+.toggle-input:checked + .toggle-label-faq .fas.fa-arrow-up {
+  display: inline-block;
+}
+
+.toggle-input:checked + .toggle-label-faq + .expanding-content {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expanding-content {
+  padding: 0 20px 0 20px;
+}
+
+.toggle-label-faq {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.expanding-content.open {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+#footer {
+  background-color: #0b0d16;
+  border: 1px solid #00e9fc; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e9fc,
+    /* Outermost border */ 0 0 5px #00e9fc, /* Glow */ 0 0 20px #00e9fc; /* More Glow */
+  color: #ecf0f1;
+  padding: 30px 0;
+  text-align: center;
+}
+
+#footer ul {
+  list-style-type: none;
+  padding: 0; /* Reset default padding */
+}
+
+#footer li {
+  display: inline;
+  margin: 0 5px;
+}
+
+#footer a {
+  width: 250px;
+  font-family: "Gotham Light", sans-serif;
+  font-size: 13px;
+  color: #ecf0f1;
+  padding: 12px; /* Adjusted padding for better proportion */
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Added transform transition */
+  display: inline-block;
+  font-weight: bold; /* Made text slightly bolder */
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+#footer a:hover {
+  transform: translateY(-2px); /* Button moves up slightly on hover */
+  background-color: #0b0d16; /* Background color */
+  border: 1px solid #00e9fc; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e9fc,
+    /* Outermost border */ 0 0 5px #00e9fc, /* Glow */ 0 0 20px #00e9fc; /* More Glow */
+}
+
+.copyright {
+  color: #e0d4d4;
+  font-family: Gotham-Light, Sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
 /* Desktop */
 @media (max-width: 1200px) {
   /* Vegas_GT */
@@ -486,6 +743,9 @@ body {
     margin: 0; /* Ensure no margin */
     box-sizing: border-box; /* Include padding in width calculation */
   }
+  .container-flex {
+    flex-direction: column;
+  }
 }
 
 /* For Tablets */
@@ -501,6 +761,8 @@ body {
     justify-content: center;
     align-items: center;
   }
+  /* Reviews */
+  /* Provider */
 }
 
 @media (max-width: 576px) {
@@ -508,5 +770,39 @@ body {
   .vegas-gt-container {
     background-position: center;
     height: 40vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* TopCasino */
+  .games-btn-1,
+  .games-btn-2,
+  .games-btn-3,
+  .games-btn-4,
+  .games-btn-5,
+  .games-btn-6 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1017px) {
+  #footer ul {
+    display: flex; /* Convert the ul to a flex container */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Take full width */
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+  }
+
+  #footer li {
+    width: 100%; /* Take full width */
+    text-align: center; /* Center text inside li */
+  }
+
+  #footer a {
+    display: block; /* Convert anchor tags to block-level elements */
+    width: 100%; /* Take full width */
   }
 }
