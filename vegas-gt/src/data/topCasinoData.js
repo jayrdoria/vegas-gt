@@ -24,7 +24,7 @@ const topCasinoData = [
       ["SLOTS", "ROULETTE", "BLACKJACK"],
       ["VIDEO POKER", "BINGO", "BACCARAT"],
       ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
-      ["KENO", "SCRATCH CARDS"],
+      ["KENO", "SCRATCH CARDS", ""],
     ],
     games: [
       "SLOTS",
@@ -49,15 +49,15 @@ const topCasinoData = [
   // Casino Voila
   {
     casino: {
-      logo: "/assets/casino_logo/casino_voila.png",
-      name: "CASINO VOILA",
+      logo: "/assets/casino_logo/x1_casino.webp",
+      name: "X1 CASINO",
       stars: 5,
       checks: [
         "Casino accepts players from many countries",
         "Extensive collection of games from multiple providers",
         "Live chat support is available 24/7",
       ],
-      link: "#",
+      link: "https://x1casino.com/home",
     },
     languages: [
       { icon: "/assets/language_options/English.png", name: "ENGLISH" },
@@ -69,7 +69,7 @@ const topCasinoData = [
       ["SLOTS", "ROULETTE", "BLACKJACK"],
       ["VIDEO POKER", "BINGO", "BACCARAT"],
       ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
-      ["KENO", "SCRATCH CARDS"],
+      ["KENO", "SCRATCH CARDS", ""],
     ],
     games: [
       "SLOTS",
@@ -105,7 +105,7 @@ const topCasinoData = [
         "Popular progressive jackpot slots",
         "Live dealer games are available",
       ],
-      link: "#",
+      link: "https://casino.chanz.com/en/#",
     },
     languages: [
       { icon: "/assets/language_options/English.png", name: "ENGLISH" },
@@ -154,7 +154,7 @@ const topCasinoData = [
         "Simple and clean website design",
         "Live chat support is available 24/7",
       ],
-      link: "#",
+      link: "https://casinobrango.com/",
     },
     languages: [
       { icon: "/assets/language_options/English.png", name: "ENGLISH" },
@@ -163,7 +163,7 @@ const topCasinoData = [
       ["SLOTS", "ROULETTE", "BLACKJACK"],
       ["VIDEO POKER", "CRAPS AND DICE", "BACCARAT"],
       ["JACKPOT GAMES", "LIVE GAMES", "KENO"],
-      ["SCRATCH CARDS"],
+      ["SCRATCH CARDS", "", ""],
     ],
     games: [
       "SLOTS",
@@ -197,7 +197,7 @@ const topCasinoData = [
         "Popular progressive jackpot slots",
         "Live dealer games are available",
       ],
-      link: "#",
+      link: "https://www.norgesspill.com/",
     },
     languages: [
       { icon: "/assets/language_options/English.png", name: "ENGLISH" },
@@ -207,7 +207,7 @@ const topCasinoData = [
       ["SLOTS", "ROULETTE", "BLACKJACK"],
       ["E-SPORTS BETTING", "BETTING", "BACCARAT"],
       ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
-      ["SCRATCH CARDS"],
+      ["SCRATCH CARDS", "", ""],
     ],
     games: [
       "SLOTS",

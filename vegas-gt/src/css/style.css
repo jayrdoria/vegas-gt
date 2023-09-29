@@ -3,7 +3,7 @@ body {
   background-color: #0b0d16 !important;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 /* Vegas_GT */
@@ -26,6 +26,11 @@ body {
 @font-face {
   font-family: "Gotham Book";
   src: url("/public/assets/fonts/GothamBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Casino";
+  src: url("/public/assets/fonts/Casino.ttf") format("truetype");
 }
 
 .top-casino-container h1 {
@@ -180,7 +185,7 @@ body {
   max-height: 0; /* This ensures the content is hidden by default */
   opacity: 0; /* Start with transparent content */
   transform: translateY(-50%); /* Start with the content slightly moved up */
-  width: 100%;
+  width: 98%;
   padding: 0 20px 0 20px;
   transition: opacity 0.5s, transform 0.5s, max-height 0.5s ease-in-out;
   will-change: opacity, transform, max-height;
@@ -233,8 +238,8 @@ body {
   border-radius: 50px;
   width: 50%;
   background-color: #0b0d16;
-  border: 3px solid #1ae0d5; /* Milder Neon Teal border */
-  box-shadow: 0 0 5px #1ae0d5, /* Milder Neon Teal Glow */ 0 0 20px #1ae0d5; /* More Milder Neon Teal Glow */
+  border: 3px solid #0b88ab; /* Milder Neon Teal border */
+  box-shadow: 0 0 5px #0b88ab, /* Milder Neon Teal Glow */ 0 0 20px #0b88ab; /* More Milder Neon Teal Glow */
   color: white; /* White text */
   padding: 2px 15px 2px 15px;
   cursor: pointer;
@@ -253,10 +258,12 @@ body {
 .dark-modal .modal-content {
   background-color: #0b0d16;
   color: white;
+  font-family: "Casino", sans-serif;
+  letter-spacing: 1px;
   border-radius: 5px;
-  border: 1px solid #00e9fc; /* Innermost border */
-  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e9fc,
-    /* Outermost border */ 0 0 5px #00e9fc, /* Glow */ 0 0 20px #00e9fc; /* More Glow */
+  border: 1px solid #0b88ab; /* Innermost border */
+  box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #0b88ab,
+    /* Outermost border */ 0 0 5px #0b88ab, /* Glow */ 0 0 20px #0b88ab; /* More Glow */
 }
 
 .dark-modal .modal-header,
@@ -269,6 +276,32 @@ body {
   text-align: center;
 }
 
+.table-dark {
+  background-color: #0b0d16; /* Table background color */
+  color: #ddd; /* Text color */
+}
+
+.table-dark td,
+.table-dark th {
+  background-color: #0b0d16; /* Cell background color */
+  border: 2px solid #0b88ab; /* Cell border */
+  box-shadow: 0 0 5px #0b88ab, /* Glow */ 0 0 20px #0b88ab; /* More Glow */
+}
+
+.table-dark tbody tr {
+  border-bottom: 2px solid #0b88ab; /* Row bottom border */
+}
+
+.table-dark thead tr {
+  border-bottom: 2px solid #0b88ab; /* Header row bottom border */
+}
+
+.table-dark {
+  border-collapse: collapse;
+  border: 2px solid #0b88ab; /* Table outer border */
+  box-shadow: 0 0 5px #0b88ab, /* Glow */ 0 0 20px #0b88ab; /* More Glow */
+}
+
 .dark-modal {
   background: rgba(255, 255, 255, 0.1); /* Slight white tint */
   backdrop-filter: blur(10px); /* Blurring the background content */
@@ -279,8 +312,8 @@ body {
 
 .dark-modal .modal-header,
 .dark-modal .modal-body {
-  border-bottom: 2px solid #00e9fc;
-  box-shadow: 0 0 5px #00e9fc, 0 0 10px #00e9fc;
+  border-bottom: 2px solid #0b88ab;
+  box-shadow: 0 0 5px #0b88ab, 0 0 10px #0b88ab;
 }
 
 .dark-modal .btn-secondary {
@@ -288,8 +321,8 @@ body {
   backdrop-filter: blur(5px); /* Blurring the background content */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); /* Soft shadow */
-  border: 2px solid #00e9fc; /* Retaining the neon border */
-  color: #00e9fc;
+  border: 2px solid #0b88ab; /* Retaining the neon border */
+  color: #0b88ab;
   transition: all 0.3s; /* Transition effect for hover */
   transform: translateY(0); /* Initial state */
   padding: 10px 15px; /* Adjust padding as needed */
@@ -453,18 +486,32 @@ body {
 /* Reviews */
 .reviews-container-carousel {
   display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
   border-radius: 30px;
-  margin-bottom: 30px;
   background-color: #0b0d16; /* Background color */
   border: 1px solid #00e666; /* Innermost border */
   box-shadow: 0 0 0 1px #0b0d16, /* Middle border */ 0 0 0 2px #00e666,
     /* Outermost border */ 0 0 5px #00e666, /* Glow */ 0 0 10px #00e666; /* More Glow */
-  flex: 0 0 49%; /* reduces the width slightly */
-  max-width: 49%; /* reduces the width slightly */
+  flex: 0 0 48%; /* reduces the width slightly */
+  max-width: 48%; /* reduces the width slightly */
+  margin: 0 5px 30px 5px;
   /*... other styles ...*/
+}
+
+.carousel-inner .row {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-inner .row {
+  padding: 0;
+  margin: 0;
 }
 .provider-h1,
 .reviews-h1 {
+  display: flex;
+  justify-content: center;
   font-family: "Neon Absolute Sans", sans-serif;
   color: white;
   font-weight: bold;
@@ -557,7 +604,7 @@ body {
   align-items: baseline;
   justify-content: center;
   padding: 20px;
-  margin: 25px 25px 25px 0;
+  margin: 10px 15px 10px 15px;
   border-radius: 5px;
   margin-bottom: 30px;
   background-color: #0b0d16; /* Background color */
@@ -573,8 +620,9 @@ body {
 
 .container-flex {
   display: flex;
-  justify-content: space-between; /* Spreads the items out equally */
+  justify-content: center; /* Spreads the items out equally */
   flex-wrap: nowrap; /* Ensures items stay on one line */
+  width: 100%;
 }
 .card.provider-container {
   background-color: #0b0d16;
@@ -715,7 +763,7 @@ body {
     height: 60vh;
   }
   .top-casino-container.container {
-    max-width: 100%; /* Override the max-width */
+    max-width: 99%; /* Override the max-width */
   }
 }
 /* For Laptops and Large Tablets */
@@ -724,18 +772,15 @@ body {
 
 @media (max-width: 991px) {
   /* TopCasino */
-  .top-casino-container {
-    max-width: 100%;
-  }
   .triple-border-container {
-    margin-bottom: 0;
+    margin: 0;
   }
   /* Top Casino */
   .triple-border-container {
     padding: 10px;
   }
   .triple-border-container .row {
-    margin: 0; /* Remove margin from the row */
+    margin: 0 !important; /* Remove margin from the row */
   }
 
   .triple-border-container .column_1 {
@@ -745,6 +790,15 @@ body {
   }
   .container-flex {
     flex-direction: column;
+  }
+  .reviews-container-carousel {
+    flex: 0 0 98%; /* reduces the width slightly */
+    max-width: 98%; /* reduces the width slightly */
+    /*... other styles ...*/
+  }
+  /* Game Provider */
+  .provider-container {
+    margin: 25px 10px 25px 10px;
   }
 }
 
@@ -762,6 +816,11 @@ body {
     align-items: center;
   }
   /* Reviews */
+  .full-width {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
   /* Provider */
 }
 

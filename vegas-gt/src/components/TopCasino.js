@@ -47,10 +47,10 @@ const TopCasino = () => {
           <div className="triple-border-container">
             <div className="row">
               <div
-                className={`column_1 col-md-8 col-lg-3 d-flex justify-content-center align-items-center ${
+                className={`column_1 col-md-7 col-lg-3 d-flex justify-content-center align-items-center ${
                   data.casino.name === "CHANZ"
                     ? "chanz_bg_color"
-                    : data.casino.name === "CASINO VOILA"
+                    : data.casino.name === "X1 CASINO"
                     ? "casino_voila_bg_color"
                     : data.casino.name === "BRANGO CASINO"
                     ? "brango_bg_color"
@@ -66,7 +66,7 @@ const TopCasino = () => {
                 />
               </div>
 
-              <div className="col-sm-12 col-lg-4">
+              <div className="col-sm-12 col-md-5 col-lg-4">
                 <div className="fw-bold custom-title pt-2">
                   {data.casino.name}
                 </div>
@@ -101,7 +101,7 @@ const TopCasino = () => {
                     <p className="text-design ml-3">{check}</p>
                   </div>
                 ))}
-                <div className="col-sm centered-btn">
+                <div className="centered-btn">
                   <a
                     href={data.casino.link}
                     target="_blank"
@@ -114,7 +114,7 @@ const TopCasino = () => {
                 </div>
               </div>
               <div className="col-lg-1"></div>
-              <div className="col-sm-12 col-lg-4">
+              <div className="col-sm-12 col-md-12 col-lg-4">
                 <div className="expanding-container mt-2">
                   <input
                     type="checkbox"
@@ -260,15 +260,19 @@ const TopCasino = () => {
           <Modal.Title>Available Games</Modal.Title>
         </Modal.Header>
         <Modal.Body className="games-modal-content">
-          {activeCasino?.modalGames?.map((gameRow, rowIndex) => (
-            <div className="d-flex justify-content-between mb-2" key={rowIndex}>
-              {gameRow.map((game, gameIndex) => (
-                <span key={gameIndex}>• {game}</span>
+          <table className="table table-bordered table-dark text-center mt-3">
+            <tbody>
+              {activeCasino?.modalGames?.map((gameRow, rowIndex) => (
+                <tr key={rowIndex}>
+                  {gameRow.map((game, gameIndex) => (
+                    <td key={gameIndex}>{game}</td>
+                  ))}
+                  {gameRow.length < 3 && <td></td>}{" "}
+                  {/* Empty cell for alignment if there are less than 3 games in the row */}
+                </tr>
               ))}
-              {rowIndex === 3 && <span></span>}{" "}
-              {/* Empty span to keep alignment for the last row */}
-            </div>
-          ))}
+            </tbody>
+          </table>
         </Modal.Body>
 
         <Modal.Footer>

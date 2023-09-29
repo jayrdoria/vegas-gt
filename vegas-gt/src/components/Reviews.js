@@ -10,6 +10,28 @@ const Reviews = () => {
     new Carousel(carouselElement, { interval: false }); // Initialize with no auto-scrolling
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const reviewContainers = document.querySelectorAll(
+        ".reviews-container-carousel"
+      );
+      if (window.innerWidth <= 768) {
+        reviewContainers.forEach((container) => {
+          container.classList.add("full-width");
+        });
+      } else {
+        reviewContainers.forEach((container) => {
+          container.classList.remove("full-width");
+        });
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container mt-4">
       <h1 className="text-center reviews-h1" id="user-reviews">
@@ -35,7 +57,7 @@ const Reviews = () => {
 
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="d-flex justify-content-between">
+            <div className="row">
               <div className="reviews-container-carousel">
                 <div className="image-and-name">
                   <img src="/assets/reviewers/Steffy.png" alt="Steffy" />
@@ -60,7 +82,6 @@ const Reviews = () => {
                   </p>
                 </div>
               </div>
-
               <div className="reviews-container-carousel">
                 <div className="image-and-name">
                   <img src="/assets/reviewers/Bergmann.png" alt="Bergmann" />
@@ -87,7 +108,7 @@ const Reviews = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <div className="d-flex justify-content-between">
+            <div className="row">
               <div className="reviews-container-carousel">
                 <div className="image-and-name">
                   <img src="/assets/reviewers/Kaisen.jpg" alt="Kaisen" />
