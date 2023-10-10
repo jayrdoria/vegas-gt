@@ -1,0 +1,235 @@
+const topCasinoData = [
+  // Stakes
+  {
+    casino: {
+      logo: "/assets/casino_logo/stakes.png",
+      name: "STAKES",
+      stars: 5,
+      checks: [
+        "Live dealer games are available",
+        "Live chat support is available 24/7",
+        "Real win rates",
+        "Plethora of supported games",
+        "Multiple Payment Methods",
+      ],
+      link: "https://www.stakes.com/",
+    },
+    languages: [
+      { icon: "/assets/language_options/English.png", name: "ENGLISH" },
+      { icon: "/assets/language_options/Spanish.png", name: "SPANISH" },
+      { icon: "/assets/language_options/German.png", name: "GERMAN" },
+      { icon: "/assets/language_options/French.png", name: "FRENCH" },
+    ],
+    modalGames: [
+      ["SLOTS", "ROULETTE", "BLACKJACK"],
+      ["VIDEO POKER", "BINGO", "BACCARAT"],
+      ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
+      ["KENO", "SCRATCH CARDS"],
+    ],
+    games: [
+      "SLOTS",
+      "ROULETTE",
+      "BLACKJACK",
+      "BINGO",
+      "VIDEO POKER",
+      "BACCARAT",
+    ],
+    paymentMethods: [
+      "/assets/payment_methods/Skrill.svg",
+      "/assets/payment_methods/visa.svg",
+      "/assets/payment_methods/Neteller.svg",
+      "/assets/payment_methods/paysafecard.svg",
+      "/assets/payment_methods/mastercard.svg",
+      "/assets/payment_methods/ecopayz.svg",
+      "/assets/payment_methods/Zimpler.svg",
+      "/assets/payment_methods/NeoSurf.png",
+    ],
+    paymentMethodImage: "/assets/payment_methods/payment_methods_stakes.png",
+  },
+  // Casino Voila
+  {
+    casino: {
+      logo: "/assets/casino_logo/casino_voila.png",
+      name: "CASINO VOILA",
+      stars: 5,
+      checks: [
+        "Casino accepts players from many countries",
+        "Extensive collection of games from multiple providers",
+        "Live chat support is available 24/7",
+      ],
+      link: "#",
+    },
+    languages: [
+      { icon: "/assets/language_options/English.png", name: "ENGLISH" },
+      { icon: "/assets/language_options/Spanish.png", name: "SPANISH" },
+      { icon: "/assets/language_options/German.png", name: "GERMAN" },
+      { icon: "/assets/language_options/French.png", name: "FRENCH" },
+    ],
+    modalGames: [
+      ["SLOTS", "ROULETTE", "BLACKJACK"],
+      ["VIDEO POKER", "BINGO", "BACCARAT"],
+      ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
+      ["KENO", "SCRATCH CARDS"],
+    ],
+    games: [
+      "SLOTS",
+      "ROULETTE",
+      "BLACKJACK",
+      "BINGO",
+      "VIDEO POKER",
+      "BACCARAT",
+    ],
+    paymentMethods: [
+      "/assets/payment_methods/Skrill.svg",
+      "/assets/payment_methods/visa.svg",
+      "/assets/payment_methods/Neteller.svg",
+      "/assets/payment_methods/paysafecard.svg",
+      "/assets/payment_methods/mastercard.svg",
+      "/assets/payment_methods/ecopayz.svg",
+      "/assets/payment_methods/Flexepin.png",
+      "/assets/payment_methods/Astropay.svg",
+    ],
+    paymentMethodImage:
+      "/assets/payment_methods/payment_methods_casinovoila.png",
+  },
+  // Chanz
+  {
+    casino: {
+      logo: "/assets/casino_logo/chanz.png",
+      name: "CHANZ",
+      stars: 5,
+      checks: [
+        'Quick and unique payment method "Express Play"',
+        "Very friendly support",
+        "Good selection of games",
+        "Popular progressive jackpot slots",
+        "Live dealer games are available",
+      ],
+      link: "#",
+    },
+    languages: [
+      { icon: "/assets/language_options/English.png", name: "ENGLISH" },
+      { icon: "/assets/language_options/Chinese.png", name: "CHINESE" },
+      { icon: "/assets/language_options/German.png", name: "GERMAN" },
+      { icon: "/assets/language_options/Russian.png", name: "RUSSIAN" },
+      { icon: "/assets/language_options/Estonian.png", name: "ESTONIAN" },
+      { icon: "/assets/language_options/Norwegian.png", name: "NORWEGIAN" },
+      { icon: "/assets/language_options/Swedish.png", name: "SWEDISH" },
+    ],
+    modalGames: [
+      ["SLOTS", "ROULETTE", "BLACKJACK"],
+      ["VIDEO POKER", "BETTING", "BACCARAT"],
+      ["JACKPOT GAMES", "LIVE GAMES", "KENO"],
+    ],
+    games: [
+      "SLOTS",
+      "ROULETTE",
+      "BLACKJACK",
+      "BETTING",
+      "VIDEO POKER",
+      "BACCARAT",
+    ],
+    paymentMethods: [
+      "/assets/payment_methods/Skrill.svg",
+      "/assets/payment_methods/visa.svg",
+      "/assets/payment_methods/Trustly.svg",
+      "/assets/payment_methods/paysafecard.svg",
+      "/assets/payment_methods/mastercard.svg",
+      "/assets/payment_methods/Euteller.png",
+      "/assets/payment_methods/Zimpler.svg",
+      "/assets/payment_methods/BankID.svg",
+    ],
+    paymentMethodImage: "/assets/payment_methods/payment_methods_chanz.png",
+  },
+  // Brango Casino
+  {
+    casino: {
+      logo: "/assets/casino_logo/brango.png",
+      name: "BRANGO CASINO",
+      stars: 5,
+      checks: [
+        "Casino accepts players from many countries",
+        "Phone customer support available",
+        "Deposits by cryptocurrencies are accepted",
+        "Simple and clean website design",
+        "Live chat support is available 24/7",
+      ],
+      link: "#",
+    },
+    languages: [
+      { icon: "/assets/language_options/English.png", name: "ENGLISH" },
+    ],
+    modalGames: [
+      ["SLOTS", "ROULETTE", "BLACKJACK"],
+      ["VIDEO POKER", "CRAPS AND DICE", "BACCARAT"],
+      ["JACKPOT GAMES", "LIVE GAMES", "KENO"],
+      ["SCRATCH CARDS"],
+    ],
+    games: [
+      "SLOTS",
+      "ROULETTE",
+      "BLACKJACK",
+      "KENO",
+      "VIDEO POKER",
+      "BACCARAT",
+    ],
+    paymentMethods: [
+      "/assets/payment_methods/Skrill.svg",
+      "/assets/payment_methods/visa.svg",
+      "/assets/payment_methods/Neteller.svg",
+      "/assets/payment_methods/Bitcoin.svg",
+      "/assets/payment_methods/mastercard.svg",
+      "/assets/payment_methods/ecopayz.svg",
+      "/assets/payment_methods/BinanceCoin.svg",
+      "/assets/payment_methods/Dogecoin.jpg",
+    ],
+    paymentMethodImage: "/assets/payment_methods/payment_methods_brango.png",
+  },
+  // Norges Spill
+  {
+    casino: {
+      logo: "/assets/casino_logo/norges_spill.png",
+      name: "NORGES SPILL",
+      stars: 5,
+      checks: [
+        "Good selection of game providers",
+        "Very friendly support",
+        "Popular progressive jackpot slots",
+        "Live dealer games are available",
+      ],
+      link: "#",
+    },
+    languages: [
+      { icon: "/assets/language_options/English.png", name: "ENGLISH" },
+      { icon: "/assets/language_options/Norwegian.png", name: "NORWEGIAN" },
+    ],
+    modalGames: [
+      ["SLOTS", "ROULETTE", "BLACKJACK"],
+      ["E-SPORTS BETTING", "BETTING", "BACCARAT"],
+      ["JACKPOT GAMES", "LIVE GAMES", "CRAPS AND DICE"],
+      ["SCRATCH CARDS"],
+    ],
+    games: [
+      "SLOTS",
+      "ROULETTE",
+      "BLACKJACK",
+      "BACCARAT",
+      "LIVE GAMES",
+      "BETTING",
+    ],
+    paymentMethods: [
+      "/assets/payment_methods/Skrill.svg",
+      "/assets/payment_methods/visa.svg",
+      "/assets/payment_methods/Neteller.svg",
+      "/assets/payment_methods/paysafecard.svg",
+      "/assets/payment_methods/mastercard.svg",
+      "/assets/payment_methods/ecopayz.svg",
+      "/assets/payment_methods/Trustly.svg",
+      "/assets/payment_methods/Bank_transfer_White.webp",
+    ],
+    paymentMethodImage: "/assets/payment_methods/payment_methods_norges.png",
+  },
+  // ... you can add more casino objects here as required
+];
+
+export default topCasinoData;

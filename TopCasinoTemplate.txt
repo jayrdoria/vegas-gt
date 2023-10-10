@@ -1,0 +1,335 @@
+import React, { useState } from "react";
+import "../css/style.css";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+
+const TopCasino = () => {
+  const [isGamesModalVisible, setGamesModalVisible] = useState(false);
+  const [isPaymentModalVisible, setPaymentModalVisible] = useState(false);
+
+  const showGamesModal = () => {
+    setGamesModalVisible(true);
+  };
+
+  const hideGamesModal = () => {
+    setGamesModalVisible(false);
+  };
+
+  const showPaymentModal = () => {
+    setPaymentModalVisible(true);
+  };
+
+  const hidePaymentModal = () => {
+    setPaymentModalVisible(false);
+  };
+  return (
+    <div className="container top-casino-container">
+      <div className="row">
+        {/* Header Title */}
+        <h1 className="text-center">TOP CASINO</h1>
+        {/* Container with glow border effect */}
+        <div className="triple-border-container">
+          <div className="row">
+            {/* Casino Image */}
+            <div className="column_1 col-xl-3 d-flex justify-content-center align-items-center">
+              <img
+                src="/assets/casino_logo/stakes.png"
+                alt="Stakes Logo"
+                className="img-fluid"
+              />
+            </div>
+            {/* Casino Title and Stars */}
+            <div className="col-xl-4">
+              <div className="fw-bold custom-title pt-2">STAKES</div>
+              <div className="yellow-stars">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              {/* Casino Check Icon and Info */}
+              <div className="check-text-container mt-2">
+                <div className="check-icon-bg">
+                  <i className="fas fa-check check-icon"></i>
+                </div>
+                <p className="text-design ml-3">
+                  Live dealer games are available
+                </p>
+              </div>
+              <div className="check-text-container">
+                <div className="check-icon-bg">
+                  <i className="fas fa-check check-icon"></i>
+                </div>
+                <p className="text-design ml-3">
+                  Live chat support is available 24/7
+                </p>
+              </div>
+              <div className="check-text-container">
+                <div className="check-icon-bg">
+                  <i className="fas fa-check check-icon"></i>
+                </div>
+                <p className="text-design ml-3">Real win rates</p>
+              </div>
+              <div className="check-text-container">
+                <div className="check-icon-bg">
+                  <i className="fas fa-check check-icon"></i>
+                </div>
+                <p className="text-design ml-3">Plethora of supported games</p>
+              </div>
+              <div className="check-text-container">
+                <div className="check-icon-bg">
+                  <i className="fas fa-check check-icon"></i>
+                </div>
+                <p className="text-design ml-3">Multiple Payment Methods</p>
+              </div>
+              <a
+                href="https://www.stakes.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="visit-casino-btn my-4">Visit Casino</button>
+              </a>
+            </div>
+            <div className="col-xl-1"></div>
+            {/* Language Options */}
+            <div className="col-xl-4">
+              <div className="expanding-container mt-2">
+                <input
+                  type="checkbox"
+                  id="toggle-expand"
+                  className="toggle-input"
+                />
+                <label htmlFor="toggle-expand" className="toggle-label">
+                  <i className="arrow-icon fas fa-arrow-down"></i>
+                  <i className="arrow-icon fas fa-arrow-up hidden"></i>
+                  LANGUAGE OPTIONS
+                </label>
+                <div className="expanding-content">
+                  <div className="language-row mb-2">
+                    <div className="language-option">
+                      <img
+                        src="/assets/language_options/English.png"
+                        alt="English Logo"
+                        className="language-icon"
+                      />
+                      <p>English</p>
+                    </div>
+                    <div className="language-option">
+                      <img
+                        src="/assets/language_options/Spanish.png"
+                        alt="Spanish Logo"
+                        className="language-icon"
+                      />
+                      <p>Spanish</p>
+                    </div>
+                    <div className="language-option">
+                      <img
+                        src="/assets/language_options/German.png"
+                        alt="German Logo"
+                        className="language-icon"
+                      />
+                      <p>German</p>
+                    </div>
+                  </div>
+                  <div className="language-row mb-2">
+                    <div className="language-option">
+                      <img
+                        src="/assets/language_options/French.png"
+                        alt="French Logo"
+                        className="language-icon"
+                      />
+                      <p>French</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Available Games */}
+              <div className="row">
+                <div className="col-xl d-flex">
+                  <button
+                    className="games-payment-btn my-1"
+                    onClick={showGamesModal}
+                  >
+                    Available Games
+                  </button>
+                </div>
+              </div>
+
+              <Modal
+                show={isGamesModalVisible}
+                onHide={hideGamesModal}
+                centered
+                className="dark-modal"
+              >
+                <Modal.Header closeButton>
+                  <Modal.Title>Available Games</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="games-modal-content">
+                  <div className="d-flex justify-content-between mb-2">
+                    <span>• SLOTS</span>
+                    <span>• ROULETTE</span>
+                    <span>• BLACKJACK</span>
+                  </div>
+                  <div className="d-flex justify-content-between mb-2">
+                    <span>• VIDEO POKER</span>
+                    <span>• BINGO</span>
+                    <span>• BACCARAT</span>
+                  </div>
+                  <div className="d-flex justify-content-between mb-2">
+                    <span>• JACKPOT GAMES</span>
+                    <span>• LIVE GAMES</span>
+                    <span>• CRAPS AND DICE</span>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <span>• KENO</span>
+                    <span>• SCRATCH CARDS</span>
+                    <span></span> {/* Empty span to keep alignment */}
+                  </div>
+                </Modal.Body>
+
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={hideGamesModal}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+              {/* Casino Games */}
+              <div className="row">
+                <div className="col-4 d-flex my-2">
+                  <button className="games-btn-1 justify-content-center">
+                    SLOTS
+                  </button>
+                </div>
+                <div className="col-4 d-flex my-2">
+                  <button className="games-btn-2 justify-content-center">
+                    ROULETTE
+                  </button>
+                </div>
+                <div className="col-4 d-flex my-2">
+                  <button className="games-btn-3 justify-content-center">
+                    BLACKJACK
+                  </button>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4 d-flex">
+                  <button className="games-btn-4 justify-content-center">
+                    BACCARAT
+                  </button>
+                </div>
+                <div className="col-4 d-flex">
+                  <button className="games-btn-5 justify-content-center">
+                    VIDEO POKER
+                  </button>
+                </div>
+                <div className="col-4 d-flex">
+                  <button className="games-btn-6 justify-content-center">
+                    BINGO
+                  </button>
+                </div>
+              </div>
+              {/* Payment Methods */}
+              <div className="row">
+                <div className="col-xl d-flex mt-1">
+                  <button
+                    className="games-payment-btn my-1"
+                    onClick={showPaymentModal}
+                  >
+                    Payment Methods
+                  </button>
+                </div>
+              </div>
+              <Modal
+                show={isPaymentModalVisible}
+                onHide={hidePaymentModal}
+                centered
+                className="dark-modal"
+              >
+                <Modal.Header closeButton>
+                  <Modal.Title>Payment Methods</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="d-flex justify-content-center align-items-center">
+                  <img
+                    src="/assets/payment_methods/payment_methods_stakes.png"
+                    alt="Payment Method - Stakes"
+                    className="img-fluid"
+                  />
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={hidePaymentModal}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+              <div className="white-bg-container my-">
+                <div className="row">
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/Skrill.svg"
+                      alt="Skrill"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/visa.svg"
+                      alt="Visa"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/Neteller.svg"
+                      alt="Neteller"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/paysafecard.svg"
+                      alt="PaySafeCard"
+                      className="my-image"
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/mastercard.svg"
+                      alt="Mastercard"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/ecopayz.svg"
+                      alt="Ecopayz"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/Zimpler.svg"
+                      alt="Zimpler"
+                      className="my-image"
+                    />
+                  </div>
+                  <div className="col-3 img-container">
+                    <img
+                      src="/assets/payment_methods/NeoSurf.png"
+                      alt="Neosurf"
+                      className="my-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TopCasino;
